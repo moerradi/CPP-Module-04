@@ -2,6 +2,7 @@
 
 Dog::Dog() : Animal("Dog")
 {
+	this->_brain = new Brain();
 	std::cout << "Dog created" << std::endl;
 }
 
@@ -19,6 +20,7 @@ Dog &Dog::operator=(const Dog &rhs)
 
 Dog::~Dog()
 {
+	delete this->_brain;
 	std::cout << "Dog destroyed" << std::endl;
 }
 
