@@ -4,6 +4,7 @@
 
 int main()
 {
+	// Animal t = new Animal();
 	Animal *animals[10];
 	for (int i = 0; i < 5; i++)
 	{
@@ -15,16 +16,10 @@ int main()
 	}
 	for (int i = 0; i < 10; i++)
 	{
-		std::cout << animals[i]->getType() << std::endl;
+		animals[i]->makeSound();
 	}
-	for (int i = 0; i < 5; i++)
+	for (int i = 0; i < 10 ; i++)
 	{
-    	Dog* d = static_cast<Dog*>(animals[i]);
-		delete d;
-	}
-	for (int i = 5; i < 10; i++)
-	{
-    	Cat* c = static_cast<Cat*>(animals[i]);
-		delete c;
+		delete animals[i];
 	}
 }

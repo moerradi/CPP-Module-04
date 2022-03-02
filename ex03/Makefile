@@ -1,6 +1,6 @@
-NAME=AnimalFarm
+NAME=MineCrampf
 FLAGS=-Wall -Wextra -Werror
-SRCS=Dog.cpp Cat.cpp Animal.cpp  WrongCat.cpp WrongAnimal.cpp Brain.cpp main.cpp
+SRCS=AMateria.cpp  Character.cpp  Cure.cpp  Ice.cpp  MateriaSource.cpp  main.cpp
 
 all: $(NAME)
 

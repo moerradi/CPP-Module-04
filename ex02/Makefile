@@ -1,5 +1,5 @@
 NAME=AnimalFarm
-FLAGS=-Wall -Wextra -Werror -g
+FLAGS=-Wall -Wextra -Werror
 SRCS=Dog.cpp Cat.cpp Animal.cpp  WrongCat.cpp WrongAnimal.cpp Brain.cpp main.cpp
 
 all: $(NAME)
