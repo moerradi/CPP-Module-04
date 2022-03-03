@@ -4,22 +4,11 @@
 
 int main()
 {
-	// Animal t = new Animal();
-	Animal *animals[10];
-	for (int i = 0; i < 5; i++)
-	{
-		animals[i] =  new Dog();
-	}
-	for (int i = 5; i < 10; i++)
-	{
-		animals[i] =  new Cat();
-	}
-	for (int i = 0; i < 10; i++)
-	{
-		animals[i]->makeSound();
-	}
-	for (int i = 0; i < 10 ; i++)
-	{
-		delete animals[i];
-	}
+	// Animal test;
+	Cat c;
+	Dog d;
+	c.makeSound();
+	d.makeSound();
+	std::cout << c.getType() << " " << std::endl;
+	std::cout << d.getType() << " " << std::endl;
 }

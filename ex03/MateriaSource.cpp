@@ -31,10 +31,10 @@ void MateriaSource::learnMateria(AMateria* m)
 }
 
 AMateria* MateriaSource::createMateria(std::string const &type) {
-	if (type == "ice")
-		return (new Ice());
-	else if (type == "cure")
-		return (new Cure());
-	else
-		return NULL;
+	for (int i = 0; i < 4 ;i++)
+	{
+		if (this->_inventory[i] != NULL && this->_inventory[i]->getType() == type)
+			return (this->_inventory[i]->clone());
+	}
+	return (NULL);
 }

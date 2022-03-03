@@ -2,26 +2,22 @@
 
 Ice::Ice() : AMateria("ice")
 {
-	std::cout << "Ice created" << std::endl;
 	return ;
 }
 
 Ice::Ice(const Ice &obj) : AMateria(obj)
 {
-	std::cout << "Ice cloned" << std::endl;
 	return ;
 }
 
 Ice::~Ice()
 {
-	std::cout << "Ice destroyed" << std::endl;
 	return ;
 }
 
 Ice &Ice::operator=(const Ice &obj)
 {
 	this->_type = obj._type;
-	std::cout << "Ice cloned" << std::endl;
 	return (*this);
 }
 

@@ -2,20 +2,17 @@
 
 AMateria::AMateria()
 {
-	std::cout << "Materia created" << std::endl;
 	return ;
 }
 
 AMateria::AMateria(std::string const &type) : _type(type)
 {
-	std::cout << "Materia created" << std::endl;
 	return ;
 }
 
 AMateria::AMateria(AMateria const &src)
 {
 	*this = src;
-	std::cout << "Materia cloned (constructor)" << std::endl;
 	return ;
 }
 
@@ -27,7 +24,6 @@ AMateria::~AMateria()
 AMateria &AMateria::operator=(AMateria const &rhs)
 {
 	this->_type = rhs._type;
-	std::cout << "Materia cloned (assingment)" << std::endl;
 	return (*this);
 }
 

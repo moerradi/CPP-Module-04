@@ -22,3 +22,7 @@ WrongCat::~WrongCat()
 	std::cout << "WrongCat destroyed" << std::endl;
 }
 
+void WrongCat::makeSound() const
+{
+	std::cout << "* I'm not a cat I don't say meow *" << std::endl;
+}

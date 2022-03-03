@@ -34,7 +34,7 @@ std::string	WrongAnimal::getType()
 	return this->type;
 }
 
-void WrongAnimal::makeSound()
+void WrongAnimal::makeSound() const
 {
 	std::cout << "* Generic wrong animal noise *" << std::endl;
 }

@@ -13,7 +13,7 @@ class WrongAnimal {
 
 		~WrongAnimal();
 		
-		void		makeSound(void);
+		void		makeSound(void) const;
 		std::string	getType(void);
 	protected:
 		std::string type;

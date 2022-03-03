@@ -29,7 +29,7 @@ Animal::~Animal()
 	std::cout << "Animal destroyed" << std::endl;
 }
 
-void Animal::makeSound()
+void Animal::makeSound() const
 {
 	std::cout << "* Generic animal noise *" << std::endl;
 }

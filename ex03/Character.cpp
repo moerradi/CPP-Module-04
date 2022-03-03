@@ -4,7 +4,6 @@ Character::Character(std::string const &name) : _name(name)
 {
 	for (int i = 0; i < 4; i++)
 		_inventory[i] = NULL;
-	std::cout << "Character created" << std::endl;
 	return ;
 }
 
@@ -16,7 +15,6 @@ Character &Character::operator=(Character const &rhs)
 		delete this->_inventory[i];
 		this->_inventory[i] = rhs._inventory[i];
 	}
-	std::cout << "Character copied" << std::endl;
 	return *this;
 }
 
@@ -29,12 +27,10 @@ Character::Character(Character const &src) {
 		else
 			_inventory[i] = NULL;
 	}
-	std::cout << "Character cloned !" << std::endl;
 	return ;
 }
 
 Character::~Character() {
-	std::cout << "Character destroyed" << std::endl;
 	return ;
 }
 
@@ -70,4 +66,19 @@ void	Character::unequip(int idx) {
 
 std::string const &Character::getName() const {
 	return _name;
+}
+
+void	Character::use(int idx, ICharacter& target) {
+	if (idx < 0 || idx > 3)
+	{
+		std::cout << "Invalid index" << std::endl;
+		return ;
+	}
+	if (_inventory[idx] == NULL)
+	{
+		std::cout << "Nothing to use" << std::endl;
+		return ;
+	}
+	_inventory[idx]->use(target);
+	return ;
 }
