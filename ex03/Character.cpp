@@ -12,7 +12,7 @@ Character &Character::operator=(Character const &rhs)
 	this->_name = rhs._name;
 	for (int i = 0; i < 4; i++)
 	{
-		if (this->_inventory != NULL)
+		if (this->_inventory[i] != NULL)
 			delete this->_inventory[i];
 		this->_inventory[i] = rhs._inventory[i];
 	}
@@ -43,7 +43,6 @@ void	Character::equip(AMateria* m) {
 		if (_inventory[i] == NULL)
 		{
 			_inventory[i] = m;
-			std::cout << "Equipped " << m->getType() << std::endl;
 			return ;
 		}
 	}
