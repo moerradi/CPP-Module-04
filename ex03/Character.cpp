@@ -12,7 +12,8 @@ Character &Character::operator=(Character const &rhs)
 	this->_name = rhs._name;
 	for (int i = 0; i < 4; i++)
 	{
-		delete this->_inventory[i];
+		if (this->_inventory != NULL)
+			delete this->_inventory[i];
 		this->_inventory[i] = rhs._inventory[i];
 	}
 	return *this;
@@ -31,6 +32,8 @@ Character::Character(Character const &src) {
 }
 
 Character::~Character() {
+	for (int i = 0; i < 4; i++)
+		delete _inventory[i];
 	return ;
 }
 

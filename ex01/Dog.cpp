@@ -8,12 +8,16 @@ Dog::Dog() : Animal("Dog")
 
 Dog::Dog(const Dog &src) : Animal(src)
 {
+	this->_brain = new Brain(*src._brain);
+	// this->_brain = src._brain;
 	std::cout << "Dog cloned" << std::endl;
 }
 
 Dog &Dog::operator=(const Dog &rhs)
 {
-	Animal::operator=(rhs);
+	this->type = rhs.type;
+	this->_brain = new Brain(*rhs._brain);
+	// this->_brain = rhs._brain;
 	std::cout << "Dog cloned" << std::endl;
 	return *this;
 }

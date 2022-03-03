@@ -1,5 +1,5 @@
 NAME=MineCrampf
-FLAGS=-Wall -Wextra -Werror
+FLAGS=-Wall -Wextra -Werror -g
 SRCS=AMateria.cpp  Character.cpp  Cure.cpp  Ice.cpp  MateriaSource.cpp  main.cpp
 
 all: $(NAME)

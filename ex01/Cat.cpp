@@ -8,12 +8,14 @@ Cat::Cat() : Animal("Cat")
 
 Cat::Cat(const Cat &src) : Animal(src)
 {
+	this->_brain = new Brain(*src._brain);
 	std::cout << "Cat cloned" << std::endl;
 }
 
 Cat &Cat::operator=(const Cat &rhs)
 {
-	Animal::operator=(rhs);
+	this->type = rhs.type;
+	this->_brain = new Brain(*rhs._brain);
 	std::cout << "Cat cloned" << std::endl;
 	return *this;
 }
